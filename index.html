@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КнигаМания - Ваша библиотека</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>КнигаМания</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#books">Книги</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="books" class="books-section">
+            <h2>Наша библиотека</h2>
+            <div class="books-grid">
+                <div class="book-card">
+                    <img src="images/book1.jpg" alt="Обложка книги">
+                    <h3>Название книги</h3>
+                    <p>Автор книги</p>
+                    <div class="book-actions">
+                        <button onclick="playAudioFromDrive('https://drive.google.com/file/d/YOUR_FILE_ID/view')" class="btn-listen">Слушать</button>
+                        <button class="btn-read">Читать</button>
+                    </div>
+                </div>
+                <!-- Добавьте больше книг по аналогии -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 КнигаМания. Все права защищены.</p>
+    </footer>
+
+    <!-- Аудио плеер -->
+    <div id="audioPlayerContainer" class="audio-player-container" style="display: none;">
+        <audio id="audioPlayer" controls>
+            <source src="" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио элемент.
+        </audio>
+    </div>
+
+    <div class="chat-assistant">
+        <div class="chat-header">
+            <span>Помощник КнигаМания</span>
+            <button class="minimize-btn">−</button>
+        </div>
+        <div class="chat-messages">
+            <div class="message assistant">
+                Здравствуйте! Я ваш помощник. Чем могу помочь?
+                <div class="message-time">Сейчас</div>
+            </div>
+        </div>
+        <div class="quick-replies">
+            <button class="quick-reply-btn">Какие книги есть?</button>
+            <button class="quick-reply-btn">Как слушать?</button>
+            <button class="quick-reply-btn">Как читать?</button>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Введите ваш вопрос...">
+            <button class="send-btn">
+                <i class="fas fa-paper-plane"></i>
+                Отправить
+            </button>
+        </div>
+    </div>
+
+    <script src="js/google-drive.js"></script>
+</body>
+</html> 
